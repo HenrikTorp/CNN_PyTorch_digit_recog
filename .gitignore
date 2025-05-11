@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+env/
+venv/
+*.env
+
+# PyTorch model files
+*.pth
+*.pt
+
+# Dataset files
+data/
+*.zip
+*.tar
+*.gz
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.old
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore image files
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
