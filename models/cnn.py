@@ -10,16 +10,20 @@ class CNNModel(nn.Module):
         self.fc1 = nn.Linear(64 * 7 * 7, 128)
         self.fc2 = nn.Linear(128, 10)
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
-        self.dropout = nn.Dropout(0.25)
+        self.dropout = nn.Dropout(0.25) 
+        # randomly zeroes some of the elements of the input tensor with probability 0.25
+        # prevents overfitting
+        # by reducing the model's reliance on any one feature
         self.relu = nn.ReLU()
 
     def forward(self, x):
         x = self.pool(self.relu(self.conv1(x)))
         x = self.pool(self.relu(self.conv2(x)))
-        x = x.view(-1, 64 * 7 * 7)
+        x = x.view(-1, 64 * 7 * 7) # reduces tensor to a batch of vectors 
         x = self.dropout(self.relu(self.fc1(x)))
         x = self.fc2(x)
         return x
 
     def configure_optimizers(self):
         return torch.optim.Adam(self.parameters(), lr=0.001)
+    # Adam optimizer being a variation of stochastic gradient descent (SGD)

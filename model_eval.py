@@ -108,7 +108,7 @@ with torch.no_grad():
 
 if __name__ == "__main__":
     # Path to the dataset folder
-    data_path = "C:/Users/Henri/OneDrive/Desktop/TorchNN/digit_recognizer/images"  # Replace with the full path
+    data_path = "images/"  # Replace with the full path
     model_path = "models/cnn_model.pth"  # Path to the saved model
 
     # Load the dataset
