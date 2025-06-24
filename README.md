@@ -21,3 +21,29 @@ Another significant contributor in this improvement was data augmentation: by ap
 3. **Training:**
    - The model is trained on the MNIST dataset using the Adam optimizer and a cross-entropy loss function.
 
+## How to run
+
+1. **Install requirements:**
+   ```
+   pip install -r requirements.txt
+   ```
+
+2. **Train the model:**
+   ```
+   python src/train.py
+   ```
+
+3. **(Optional) Evaluate the model:**
+   ```
+   python model_eval.py
+   ```
+
+4. **Run the digit drawing GUI:**
+   ```
+   python main.py
+   ```
+
+Make sure you have Python 3.8+ installed.  
+The GUI will let you draw digits and see the model’s predictions in real time.
+
+
