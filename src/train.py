@@ -33,11 +33,11 @@ def train_model():
         dataset=train_dataset,
         batch_size=batch_size,
         shuffle=True,
-        num_workers=0  # Use more available CPU cores
+        num_workers=0  # Use more available CPU cores if needed, but can cause issues
     )
 
     # Initialize model, loss function, and optimizer
-    model = CNNModel()  # No need to move to GPU
+    model = CNNModel()  
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 

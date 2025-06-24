@@ -91,18 +91,6 @@ def load_single_image(image_path, device):
     return image_tensor
 
 
-"""
-image = load_single_image('dutch8test.png', device='cpu')
-model = CNNModel()
-model.load_state_dict(torch.load("models/cnn_model.pth", map_location='cpu'))
-#print predicted label
-with torch.no_grad():
-    model.eval()
-    output = model(image)
-    predicted_label = torch.argmax(output, dim=1).item()
-    print(f"Predicted label: {predicted_label}")
-"""
-
 
 
 

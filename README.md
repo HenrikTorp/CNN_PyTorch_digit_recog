@@ -1,6 +1,10 @@
 # Digit Recognizer with PyTorch
 
-This project implements a **Convolutional Neural Network (CNN)** using PyTorch to recognize handwritten digits. The model is designed to process images more effectively by leveraging convolutional layers, which focus on local patterns in the image (e.g., edges, shapes).
+This project implements a **Convolutional Neural Network (CNN)** using PyTorch to recognize handwritten digits. The model processes images more effectively by leveraging convolutional layers, which focus on local patterns in the image (e.g., edges and shapes).
+
+It achieves much better results than the fully connected network I previously made using only NumPy, reaching 99.21% accuracy on a dataset of custom drawn digits after being trained on the MNIST dataset. This shows the model has generalized well and performs strongly on new data even without any fine-tuning.
+
+Another significant contributor in this improvement was data augmentation: by applying random distortions to the digits in the MNIST dataset, the effective size of the training set was increased and the model became more robust to variations. When drawing digits, the CNN is noticeably better at handling distorted or unusual digits than the previous fully connected neural network, which did not use data augmentation.
 
 ## Features
 - **Two Convolutional Layers:** The first layer processes the input image in 3x3 chunks, extracting local features. The second layer refines these features before passing them to fully connected layers.
@@ -16,4 +20,4 @@ This project implements a **Convolutional Neural Network (CNN)** using PyTorch t
    - After the convolutional layers, the features are flattened and passed through a fully connected layer to classify the digit.
 3. **Training:**
    - The model is trained on the MNIST dataset using the Adam optimizer and a cross-entropy loss function.
-   - 
+
