@@ -28,22 +28,7 @@ Another significant contributor in this improvement was data augmentation: by ap
    pip install -r requirements.txt
    ```
    
-
-<<<<<<< HEAD
-2. **Run the digit drawing GUI:**
-=======
-2. **(Optional) Train the model:**
-   ```
-   python src/train.py
-   ```
-
-3. **(Optional) Evaluate the model:**
-   ```
-   python model_eval.py
-   ```
-
-4. **Run the digit drawing GUI:**
->>>>>>> 2154e48a25d8cad03f5c401084845d29cc677520
+2. **How to run:**
    ```
    python main.py
    ```
