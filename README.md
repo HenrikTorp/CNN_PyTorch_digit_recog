@@ -28,7 +28,7 @@ Another significant contributor in this improvement was data augmentation: by ap
    pip install -r requirements.txt
    ```
 
-2. **Train the model:**
+2. **(Optional) Train the model:**
    ```
    python src/train.py
    ```
