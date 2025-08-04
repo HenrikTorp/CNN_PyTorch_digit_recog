@@ -9,8 +9,8 @@ venv/
 *.env
 
 # PyTorch model files
-*.pth
-*.pt
+#*.pth
+#*.pt
 
 # Dataset files
 data/
