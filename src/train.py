@@ -24,7 +24,7 @@ def train_model():
         transforms.RandomAffine(0, scale=(0.9, 1.1)),  # Random scaling
         transforms.RandomAffine(0, shear=10),  # Random shear
         transforms.ToTensor(),  # Convert to tensor
-        transforms.Normalize((0.5,), (0.5,))  # Normalize to [-1, 1]
+        transforms.Normalize((0.5,), (0.5,))  # first 0.5 value subtracted from each pixel, then divided by 0.5, results in values between -1 and 1
     ])
 
     # Load datasets
